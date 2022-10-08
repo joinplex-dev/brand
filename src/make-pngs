@@ -1,0 +1,45 @@
+#!/bin/sh
+#
+# A pre-commit hook script to compile the SVGs into PNGs of various sizes.
+# Place in the ./png folder. Requires Inkscape to be installed and in the PATH.
+# To enable this hook, call it from the ".git/hooks/pre-commit".
+
+# Repo path
+REPO_PATH=$(git rev-parse --show-toplevel)
+
+# Get a path to the SVGs
+SVG_PATH="$REPO_PATH/svg"
+
+# Get inkscape
+INKSCAPE=$(which inkscape)
+
+# The width of PNGs we would like to generate
+WIDTHS="16 32 48 64 128 256 512 1024 2048"
+
+# List of SVGS
+SVGS=$(ls $SVG_PATH/*.svg)
+
+# Loop through the widths create the folders for PNGS
+for WIDTH in $WIDTHS
+do
+    # Create the folder
+    mkdir -p $REPO_PATH/png/$WIDTH
+
+    # Loop through the SVGs
+    for SVG in $SVGS
+    do
+        echo "Generating $SVG... with width $WIDTH"
+
+        # Get the filename
+        FILENAME=$(basename $SVG)
+
+        # Get the name of the file without the extension
+        FILENAME_NO_EXT=${FILENAME%.*}
+
+        # Get the path to the PNG
+        PNG_PATH=$REPO_PATH/png/$WIDTH/$FILENAME_NO_EXT.png
+
+        # Create the PNG
+        INKSCAPE --export-filename="$PNG_PATH" --export-type="png" --export-width="$WIDTH" "$SVG"
+    done
+done
