@@ -7,8 +7,11 @@
 # Repo path
 REPO_PATH=$(git rev-parse --show-toplevel)
 
+# Images path
+IMG_PATH="$REPO_PATH/img"
+
 # Get a path to the SVGs
-SVG_PATH="$REPO_PATH/svg"
+SVG_PATH="$IMG_PATH/svg"
 
 # Get inkscape
 INKSCAPE=$(which inkscape)
@@ -22,14 +25,14 @@ SVGS=$(ls $SVG_PATH/*.svg)
 # Loop through the widths create the folders for PNGS
 for WIDTH in $WIDTHS
 do
+    WIDTH_FOLDER="$IMG_PATH/png/$WIDTH"
+
     # Create the folder
-    mkdir -p $REPO_PATH/png/$WIDTH
+    mkdir -p "$WIDTH_FOLDER"
 
     # Loop through the SVGs
     for SVG in $SVGS
     do
-        echo "Generating $SVG... with width $WIDTH"
-
         # Get the filename
         FILENAME=$(basename $SVG)
 
@@ -37,7 +40,7 @@ do
         FILENAME_NO_EXT=${FILENAME%.*}
 
         # Get the path to the PNG
-        PNG_PATH=$REPO_PATH/png/$WIDTH/$FILENAME_NO_EXT.png
+        PNG_PATH="$WIDTH_FOLDER/$FILENAME_NO_EXT.png"
 
         # Create the PNG
         INKSCAPE --export-filename="$PNG_PATH" --export-type="png" --export-width="$WIDTH" "$SVG"
