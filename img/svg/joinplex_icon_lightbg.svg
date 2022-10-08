@@ -175,7 +175,11 @@
        refX="0"
        id="TriangleInS-3-2"
        style="overflow:visible"
-       inkscape:isstock="true">
+       inkscape:isstock="true"
+       viewBox="0 0 2.1297632 2.462154"
+       markerWidth="2.1297631"
+       markerHeight="2.4621539"
+       preserveAspectRatio="xMidYMid">
       <path
          inkscape:connector-curvature="0"
          id="path4773-6-4"
@@ -191,9 +195,9 @@
        id="TriangleInS-3-2-9"
        style="overflow:visible"
        inkscape:isstock="true"
-       viewBox="0 0 2.1297632 2.462154"
-       markerWidth="2.1297631"
-       markerHeight="2.4621539"
+       viewBox="0 0 2.12976324 2.46215403"
+       markerWidth="2.12976316"
+       markerHeight="2.46215394"
        preserveAspectRatio="xMidYMid">
       <path
          inkscape:connector-curvature="0"
@@ -211,8 +215,8 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="2.8284271"
-     inkscape:cx="9.3691649"
-     inkscape:cy="51.972349"
+     inkscape:cx="-6.5407378"
+     inkscape:cy="14.495689"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -267,8 +271,8 @@
        inkscape:connector-curvature="0"
        id="path74"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:85.3333px;line-height:1.25;font-family:Raleway;-inkscape-font-specification:Raleway;letter-spacing:0px;word-spacing:0px;fill:#0084da;fill-opacity:1;stroke:none;stroke-width:0.264583;stroke-opacity:1"
-       d="m 83.114438,74.969065 5.540862,1.832817 -1.195661,-5.712338 3.536786,-3.157746 1.657551,9.416292 6.428365,1.913364 -1.081246,3.906099 -5.255761,-1.784686 1.180029,5.423619 -3.553624,3.172782 -1.641919,-9.127578 -9.005313,-2.920316 z"
-       sodipodi:nodetypes="ccccccccccccc" />
+       d="m 83.114438,74.969065 5.540862,1.832817 -1.195661,-5.712338 3.536786,-3.157746 1.657551,9.416292 6.428365,1.913364 1.687669,0.675609 -0.68287,4.000626 -2.086045,-0.770136 -5.255761,-1.784686 1.180029,5.423619 -3.553624,3.172782 -1.641919,-9.127578 -9.005313,-2.920316 z"
+       sodipodi:nodetypes="ccccccccccccccc" />
     <path
        inkscape:connector-curvature="0"
        id="path64-1"
