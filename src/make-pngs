@@ -17,7 +17,7 @@ SVG_PATH="$IMG_PATH/svg"
 INKSCAPE=$(which inkscape)
 
 # The width of PNGs we would like to generate
-WIDTHS="16 32 48 64 128 256 512 1024 2048"
+WIDTHS="16 32 48 64 128 180 256 512 1024 2048"
 
 # List of SVGS
 SVGS=$(ls $SVG_PATH/*.svg)
